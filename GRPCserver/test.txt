@@ -1,0 +1,15 @@
+
+message Hello {
+    int32 id = 1; // когда отправляет пофик ему на название ему надо только uid который не повторяется в пределах одного сообщения
+    repeated int64 my_wins = 2; // repeated динамический массив int64
+}
+
+message TestHello {
+    Hello test = 1; // наследует
+}
+
+// ассоциативный массив
+enum StatusPc {
+    On = 0;
+    Off = 1;
+}

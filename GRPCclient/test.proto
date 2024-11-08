@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package testGrpc;
+
+option go_package = "test/invoicer"; // путь куда будет сохранен сгенерированный код
+
+service Adder{ //через эту переменную я разговариваю
+    rpc Add (HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+    int32 x = 1;
+    int32 y = 2; //id = 2 with name y
+}
+
+message HelloResponse {
+    int32 z = 1;
+}
